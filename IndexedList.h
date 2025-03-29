@@ -7,6 +7,9 @@ typedef int TElem;
 class ListIterator;
 
 class IndexedList {
+
+    //11. ADT IndexedList – repräsentiert mithilfe einer SLLA
+
 private:
     //TODO - Representation
 
