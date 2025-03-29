@@ -10,8 +10,18 @@ class IndexedList {
 
     //11. ADT IndexedList – repräsentiert mithilfe einer SLLA
 
+    struct Node {
+        TElem data;
+        Node* next;
+    };
+
 private:
-    //TODO - Representation
+
+    Node* nodesArray;
+    int capacity;
+    int sizeOf;
+    Node* head;
+    int firstEmpty;
 
     //DO NOT CHANGE THIS PART
     friend class ListIterator;

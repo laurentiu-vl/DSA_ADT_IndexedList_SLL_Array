@@ -9,7 +9,8 @@ class ListIterator{
 
 private:
     const IndexedList& list;
-    //TODO - Representation
+
+    int currentIndex;
 
     ListIterator(const IndexedList& lista);
 public:
