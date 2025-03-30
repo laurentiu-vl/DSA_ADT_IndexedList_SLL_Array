@@ -12,10 +12,10 @@ class IndexedList {
 
 private:
 
-    TElem* elems;
-    int* next;
+    TElem* elemsArray;
+    int* nextIndexArray;
     int capacity;
-    int sizeElemsArray;
+    int sizeForElemsArray;
     int headIndex;
     int firstEmpty;
 
