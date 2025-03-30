@@ -1,6 +1,9 @@
 #include <exception>
 
 #include "IndexedList.h"
+
+#include <stdexcept>
+
 #include "ListIterator.h"
 
 IndexedList::IndexedList() {
@@ -24,12 +27,16 @@ bool IndexedList::isEmpty() const {
 }
 
 TElem IndexedList::getElement(int pos) const {
-    //TODO - Implementation
-    return NULL_TELEM;
+    if (pos < 0 || pos >= capacity) {
+        throw std::out_of_range("IndexedList::getElement");
+    }
+    int count = 0;
+
 }
 
 TElem IndexedList::setElement(int pos, TElem e) {
-
+    //TODO - Implementation
+    return NULL_TELEM;
 }
 
 void IndexedList::addToEnd(TElem e) {
