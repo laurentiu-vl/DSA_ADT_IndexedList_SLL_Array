@@ -18,8 +18,10 @@ void ListIterator::next() {
 }
 
 bool ListIterator::valid() const {
-    //TODO - Implementation
-    //return false;
+    if (currentIndex >= 0 && currentIndex < list.size()) {
+        return true;
+    }
+    return false;
 }
 
 TElem ListIterator::getCurrent() const {
