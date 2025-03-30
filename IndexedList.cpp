@@ -4,7 +4,6 @@
 #include "ListIterator.h"
 
 IndexedList::IndexedList() {
-    //TODO - Implementation
     capacity = 2;
     sizeForElemsArray = 0; //
     elemsArray = new TElem[capacity];
@@ -14,8 +13,8 @@ IndexedList::IndexedList() {
 }
 
 int IndexedList::size() const {
-    //TODO - Implementation
-    return 0;
+    return sizeForElemsArray;
+    //or iterate
 }
 
 
@@ -30,8 +29,7 @@ TElem IndexedList::getElement(int pos) const {
 }
 
 TElem IndexedList::setElement(int pos, TElem e) {
-    //TODO - Implementation
-    return NULL_TELEM;
+
 }
 
 void IndexedList::addToEnd(TElem e) {
@@ -47,7 +45,7 @@ TElem IndexedList::remove(int pos) {
     return NULL_TELEM;
 }
 
-int IndexedList::search(TElem e) const{
+int IndexedList::search(TElem e) const {
     //TODO - Implementation
     return 0;
 }
