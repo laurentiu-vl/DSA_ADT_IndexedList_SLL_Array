@@ -5,6 +5,12 @@
 
 IndexedList::IndexedList() {
     //TODO - Implementation
+    capacity = 2;
+    sizeForElemsArray = 0; //
+    elemsArray = new TElem[capacity];
+    nextIndexArray = new int[capacity];
+    headIndex = 0;
+    firstEmpty = 0;
 }
 
 int IndexedList::size() const {
