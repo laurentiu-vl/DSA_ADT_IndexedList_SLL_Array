@@ -12,6 +12,7 @@ IndexedList::IndexedList() {
     elemsArray = new int[capacity];
     nextIndexArray = new int[capacity];
     headIndex = -1;
+    sizeForElemsArray = 0;
     //TODO
 }
 
@@ -32,9 +33,7 @@ TElem IndexedList::getElement(int pos) const {
     }
     int count = 0;
     int currentIndex = headIndex;
-    for (int i = 0; i < pos; i++) {
 
-    }
 }
 
 TElem IndexedList::setElement(int pos, TElem e) {
