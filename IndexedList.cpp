@@ -2,17 +2,17 @@
 
 #include "IndexedList.h"
 
+#include <ranges>
 #include <stdexcept>
 
 #include "ListIterator.h"
 
 IndexedList::IndexedList() {
     capacity = 2;
-    sizeForElemsArray = 0; //
-    elemsArray = new TElem[capacity];
+    elemsArray = new int[capacity];
     nextIndexArray = new int[capacity];
-    headIndex = 0;
-    firstEmpty = 0;
+    headIndex = -1;
+    //TODO
 }
 
 int IndexedList::size() const {
