@@ -33,7 +33,11 @@ TElem IndexedList::getElement(int pos) const {
     }
     int count = 0;
     int currentIndex = headIndex;
-
+    while (currentIndex != -1 && count < pos) {
+        currentIndex = nextIndexArray[currentIndex];
+        count++;
+    }
+    return elemsArray[currentIndex];
 }
 
 TElem IndexedList::setElement(int pos, TElem e) {
