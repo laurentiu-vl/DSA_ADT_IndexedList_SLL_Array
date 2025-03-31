@@ -70,15 +70,17 @@ TElem IndexedList::remove(int pos) { //laurentiu
 int IndexedList::search(TElem e) const { //laurentiu
     int currentIndex = headIndex;
     bool found = false;
+    int pos = 0;
     while (currentIndex != -1 && e != NULL_TELEM) {
         if (e == elemsArray[currentIndex]) {
             found = true;
             break;
         }
         currentIndex = nextIndexArray[currentIndex];
+        pos++;
     }
     if (found) {
-        return elemsArray[currentIndex];
+        return pos;
     }
     return -1;
 }
