@@ -19,7 +19,7 @@ void ListIterator::next() {
 
 bool ListIterator::valid() const {
     if (currentIndex >= 0 && currentIndex < list.size()
-            && list.next[currentIndex] != -1) {
+            && list.elemsArray[currentIndex] != -1) {
         return true;
     }
     return false;
@@ -27,7 +27,7 @@ bool ListIterator::valid() const {
 
 TElem ListIterator::getCurrent() const {
     if (valid()) {
-        return list.elems[currentIndex];
+        return list.elemsArray[currentIndex];
     }
     throw std::out_of_range("Iterator out of range");
 }
