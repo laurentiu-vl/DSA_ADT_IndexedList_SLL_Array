@@ -61,4 +61,8 @@ public:
     //destructor
     ~IndexedList();
 
+    void resizeUp();
+
+    void resizeDown();
+
 };
