@@ -31,7 +31,10 @@ TElem IndexedList::getElement(int pos) const {
         throw std::out_of_range("IndexedList::getElement");
     }
     int count = 0;
+    int currentIndex = headIndex;
+    for (int i = 0; i < pos; i++) {
 
+    }
 }
 
 TElem IndexedList::setElement(int pos, TElem e) {
