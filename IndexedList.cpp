@@ -13,7 +13,7 @@ IndexedList::IndexedList() {
     nextIndexArray = new int[capacity];
     headIndex = -1;
     sizeForElemsArray = 0;
-    //TODO
+    firstEmpty = -1;
 }
 
 int IndexedList::size() const {
