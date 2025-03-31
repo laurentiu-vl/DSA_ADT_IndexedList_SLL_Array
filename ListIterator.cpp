@@ -19,7 +19,7 @@ void ListIterator::next() {
 
 bool ListIterator::valid() const {
     if (currentIndex >= 0 && currentIndex < list.size()
-            && list.elemsArray[currentIndex] != -1) {
+            && list.nextIndexArray[currentIndex] != -1) {
         return true;
     }
     return false;
