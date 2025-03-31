@@ -59,8 +59,19 @@ TElem IndexedList::remove(int pos) { //laurentiu
 }
 
 int IndexedList::search(TElem e) const { //laurentiu
-    //TODO - Implementation
-    return 0;
+    int currentIndex = headIndex;
+    bool found = false;
+    while (currentIndex != -1 && e != NULL_TELEM) {
+        if (e == elemsArray[currentIndex]) {
+            found = true;
+            break;
+        }
+        currentIndex = nextIndexArray[currentIndex];
+    }
+    if (found) {
+        return elemsArray[currentIndex];
+    }
+    return -1;
 }
 
 ListIterator IndexedList::iterator() const {
