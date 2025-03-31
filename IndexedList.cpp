@@ -53,12 +53,12 @@ void IndexedList::addToPosition(int pos, TElem e) {
     //TODO - Implementation
 }
 
-TElem IndexedList::remove(int pos) {
+TElem IndexedList::remove(int pos) { //laurentiu
     //TODO - Implementation
     return NULL_TELEM;
 }
 
-int IndexedList::search(TElem e) const {
+int IndexedList::search(TElem e) const { //laurentiu
     //TODO - Implementation
     return 0;
 }
@@ -67,6 +67,14 @@ ListIterator IndexedList::iterator() const {
     return ListIterator(*this);
 }
 
-IndexedList::~IndexedList() {
+IndexedList::~IndexedList() { //laurentiu
     //TODO - Implementation
+}
+
+void IndexedList::resizeUp() {
+
+}
+
+void IndexedList::resizeDown() {
+
 }
