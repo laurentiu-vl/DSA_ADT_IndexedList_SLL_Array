@@ -54,17 +54,17 @@ void IndexedList::addToPosition(int pos, TElem e) {
 }
 
 TElem IndexedList::remove(int pos) { //laurentiu
-    if (size() == 0) {
-        return NULL_TELEM;
-    }
-    int currentIndex = headIndex;
-    int previousIndex = -1;
-    while (currentIndex != -1 && elemsArray[currentIndex] != )
-
-
-
-
-    return NULL_TELEM;
+    // if (size() == 0) {
+    //     return NULL_TELEM;
+    // }
+    // int currentIndex = headIndex;
+    // int previousIndex = -1;
+    // while (currentIndex != -1 && elemsArray[currentIndex] != )
+    //
+    //
+    //
+    //
+    // return NULL_TELEM;
 }
 
 int IndexedList::search(TElem e) const { //laurentiu
