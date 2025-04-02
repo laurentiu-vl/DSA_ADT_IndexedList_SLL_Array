@@ -5,9 +5,6 @@
 #include "IndexedList.h"
 #include "ListIterator.h"
 
-
-
-
 void testAll() {
     IndexedList list = IndexedList();
     assert(list.isEmpty());
@@ -26,4 +23,9 @@ void testAll() {
     assert(list.getElement(1) == 3);
     assert(list.remove(0) == 2);
     assert(list.size() == 1);
+}
+
+void testLaurentiu() {
+    IndexedList list = IndexedList();
+
 }
