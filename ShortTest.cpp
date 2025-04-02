@@ -26,6 +26,5 @@ void testAll() {
 }
 
 void testLaurentiu() {
-    IndexedList list = IndexedList();
-
+    IndexedList list;
 }
