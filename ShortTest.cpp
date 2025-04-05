@@ -40,5 +40,5 @@ void testLaurentiu() {
 
     IndexedList list2 = IndexedList(capacity, elemsArray, next, head, size, firstE);
     //std::cout << list2.search(1) << std::endl;
-    std::cout << list2.getElement(4) << std::endl;
+    //std::cout << list2.getElement(4) << std::endl;
 }
