@@ -91,6 +91,7 @@ TElem IndexedList::remove(int pos) { //laurentiu
 
     nextIndexArray[currentIndex] = firstEmpty;
     firstEmpty = currentIndex;
+    sizeForElemsArray--;
 
     return foundElem;
 
