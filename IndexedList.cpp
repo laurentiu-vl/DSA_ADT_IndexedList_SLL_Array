@@ -16,6 +16,16 @@ IndexedList::IndexedList() {
     firstEmpty = -1;
 }
 
+IndexedList::IndexedList(int capacity, int elemsArray[], int nextIndexArray[],
+                                    int headIndex, int size, int firstE) {
+    this->capacity = capacity;
+    this->elemsArray = elemsArray;
+    this->nextIndexArray = nextIndexArray;
+    this->headIndex = headIndex;
+    this->sizeForElemsArray = size;
+    this->firstEmpty = firstE;
+}
+
 int IndexedList::size() const {
     return sizeForElemsArray;
     //or iterate
