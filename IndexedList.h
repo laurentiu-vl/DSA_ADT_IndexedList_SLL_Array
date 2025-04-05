@@ -25,6 +25,8 @@ public:
     // constructor
     IndexedList ();
 
+    IndexedList (int capacity, int elems[], int next[], int head, int size, int firstE);
+
     // returns the number of elements from the list
     int size() const;
 
