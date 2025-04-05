@@ -32,12 +32,13 @@ void testAll() {
 void testLaurentiu() {
     //IndexedList list = IndexedList();
     int capacity = 10;
-    int elemsArray[capacity] = {1, 2, 3, 4};
-    int next[capacity] = {-1, 3, 4, 1};
-    int head = 2;
+    int elemsArray[capacity] = {10, 8, 9, 2};
+    int next[capacity] = {-1, 3, 0, 2};
+    int head = 1;
     int size = 0;
     int firstE = 0;
 
     IndexedList list2 = IndexedList(capacity, elemsArray, next, head, size, firstE);
-    std::cout << list2.search(1) << std::endl;
+    //std::cout << list2.search(1) << std::endl;
+    std::cout << list2.getElement(4) << std::endl;
 }
