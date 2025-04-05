@@ -67,27 +67,27 @@ void IndexedList::addToPosition(int pos, TElem e) {
 }
 
 TElem IndexedList::remove(int pos) { //laurentiu
-    // if (pos < 0 || pos >= capacity) {
-    //     throw std::out_of_range("IndexedList::remove");
-    // }
-    // int count = 0;
-    // TElem foundElem;
-    // int currentIndex = headIndex;
-    // int previousIndex;
-    //
-    // while (currentIndex != -1 && count < pos) {
-    //     if (currentIndex == pos) {
-    //         foundElem = elemsArray[currentIndex];
-    //     }
-    //     previousIndex = currentIndex;
-    //     currentIndex = nextIndexArray[currentIndex];
-    //     count++;
-    // }
-    //
-    //
-    //
-    //
-    // return foundElem;
+    if (pos < 0 || pos >= capacity) {
+        throw std::out_of_range("IndexedList::remove");
+    }
+    int count = 0;
+    TElem foundElem;
+    int currentIndex = headIndex;
+    int previousIndex;
+
+    while (currentIndex != -1 && count < pos) {
+        if (currentIndex == pos) {
+            foundElem = elemsArray[currentIndex];
+        }
+        previousIndex = currentIndex;
+        currentIndex = nextIndexArray[currentIndex];
+        count++;
+    }
+
+
+
+
+    return foundElem;
 }
 
 int IndexedList::search(TElem e) const { //laurentiu
