@@ -100,7 +100,8 @@ ListIterator IndexedList::iterator() const {
 }
 
 IndexedList::~IndexedList() { //laurentiu
-    //TODO - Implementation
+    delete[] nextIndexArray;
+    delete[] elemsArray;
 }
 
 void IndexedList::resizeUp() {
