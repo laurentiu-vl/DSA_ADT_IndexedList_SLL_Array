@@ -47,27 +47,27 @@ void testLaurentiu() {
     //     std::cout << elemsArray[i] << std::endl;
     // }
 
-    if (pos < 0 || pos >= sizeForElemsArray) {
-        throw std::out_of_range("Position is out of range.");
-    }
-
-    int currentIndex = headIndex;
-    int previousIndex = -1;
-
-    for (int i = 0; i < pos; ++i) {
-        previousIndex = currentIndex;
-        currentIndex = nextIndexArray[currentIndex];
-    }
-
-    TElem removedElement = elemsArray[currentIndex];
-
-    // Update the links to bypass the removed element
-    nextIndexArray[previousIndex] = nextIndexArray[currentIndex];
-
-    // Add the removed index back to the free list
-    nextIndexArray[currentIndex] = firstEmpty;
-    firstEmpty = currentIndex;
-    sizeForElemsArray--;
-
-    return removedElement;
+    // if (pos < 0 || pos >= sizeForElemsArray) {
+    //     throw std::out_of_range("Position is out of range.");
+    // }
+    //
+    // int currentIndex = headIndex;
+    // int previousIndex = -1;
+    //
+    // for (int i = 0; i < pos; ++i) {
+    //     previousIndex = currentIndex;
+    //     currentIndex = nextIndexArray[currentIndex];
+    // }
+    //
+    // TElem removedElement = elemsArray[currentIndex];
+    //
+    // // Update the links to bypass the removed element
+    // nextIndexArray[previousIndex] = nextIndexArray[currentIndex];
+    //
+    // // Add the removed index back to the free list
+    // nextIndexArray[currentIndex] = firstEmpty;
+    // firstEmpty = currentIndex;
+    // sizeForElemsArray--;
+    //
+    // return removedElement;
 }

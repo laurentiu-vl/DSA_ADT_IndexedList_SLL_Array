@@ -84,7 +84,12 @@ TElem IndexedList::remove(int pos) { //laurentiu
         currentIndex = nextIndexArray[currentIndex];
         count++;
     }
+    //foundElem = elemsArray[currentIndex];
+    nextIndexArray[previousIndex] = nextIndexArray[currentIndex]; //prev pointeaza
+    //la urmatorul de dupa currentIndex?
 
+    nextIndexArray[currentIndex] = firstEmpty;
+    firstEmpty = currentIndex;
 
     return foundElem;
 
