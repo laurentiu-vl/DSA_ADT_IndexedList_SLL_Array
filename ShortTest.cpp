@@ -35,10 +35,39 @@ void testLaurentiu() {
     int elemsArray[capacity] = {10, 8, 9, 2};
     int next[capacity] = {-1, 3, 0, 2};
     int head = 1;
-    int size = 0;
+    int size = 100;
     int firstE = 0;
 
     IndexedList list2 = IndexedList(capacity, elemsArray, next, head, size, firstE);
     //std::cout << list2.search(1) << std::endl;
     //std::cout << list2.getElement(4) << std::endl;
+    std::cout << list2.remove(1) << std::endl;
+
+    // for (int i = 0; i < 5; i++) {
+    //     std::cout << elemsArray[i] << std::endl;
+    // }
+
+    if (pos < 0 || pos >= sizeForElemsArray) {
+        throw std::out_of_range("Position is out of range.");
+    }
+
+    int currentIndex = headIndex;
+    int previousIndex = -1;
+
+    for (int i = 0; i < pos; ++i) {
+        previousIndex = currentIndex;
+        currentIndex = nextIndexArray[currentIndex];
+    }
+
+    TElem removedElement = elemsArray[currentIndex];
+
+    // Update the links to bypass the removed element
+    nextIndexArray[previousIndex] = nextIndexArray[currentIndex];
+
+    // Add the removed index back to the free list
+    nextIndexArray[currentIndex] = firstEmpty;
+    firstEmpty = currentIndex;
+    sizeForElemsArray--;
+
+    return removedElement;
 }

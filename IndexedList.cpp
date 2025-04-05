@@ -67,13 +67,14 @@ void IndexedList::addToPosition(int pos, TElem e) {
 }
 
 TElem IndexedList::remove(int pos) { //laurentiu
-    if (pos < 0 || pos >= capacity) {
+    if (pos < 0 || pos >= sizeForElemsArray) {
         throw std::out_of_range("IndexedList::remove");
     }
+
     int count = 0;
     TElem foundElem;
     int currentIndex = headIndex;
-    int previousIndex;
+    int previousIndex = 0;
 
     while (currentIndex != -1 && count < pos) {
         if (currentIndex == pos) {
@@ -85,9 +86,9 @@ TElem IndexedList::remove(int pos) { //laurentiu
     }
 
 
-
-
     return foundElem;
+
+
 }
 
 int IndexedList::search(TElem e) const { //laurentiu
