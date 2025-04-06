@@ -43,5 +43,7 @@ void testLaurentiu() {
     //std::cout << list2.getElement(4) << std::endl;
     std::cout << list2.remove(0) << std::endl;
 
-
+    ListIterator it2 = list2.iterator();
+    assert(it2.valid());
+    assert(it2.getCurrent() == 8);
 }
