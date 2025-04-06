@@ -6,7 +6,7 @@
 #include <assert.h>
 
 ListIterator::ListIterator(const IndexedList &list) : list(list) {
-    currentIndex = 0;
+    currentIndex = list.headIndex;
 }
 
 void ListIterator::first() {
