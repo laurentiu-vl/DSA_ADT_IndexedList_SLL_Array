@@ -6,7 +6,8 @@
 #include <assert.h>
 
 ListIterator::ListIterator(const IndexedList &list) : list(list) {
-    currentIndex = list.headIndex;
+    //currentIndex = list.headIndex;
+    currentIndex = 2;
 }
 
 void ListIterator::first() {
@@ -27,7 +28,7 @@ bool ListIterator::valid() const {
 
 TElem ListIterator::getCurrent() const {
     if (valid()) {
-        return list.elemsArray[currentIndex];
+        return list.elemsArray[list.nextIndexArray[currentIndex]];
     }
     throw std::out_of_range("Iterator out of range");
 }
