@@ -4,8 +4,11 @@
 
 #include <ranges>
 #include <stdexcept>
+#include <exception>
 
 #include "ListIterator.h"
+
+using namespace std;
 
 IndexedList::IndexedList() {
     capacity = 2;
@@ -33,9 +36,12 @@ int IndexedList::size() const {
 
 
 bool IndexedList::isEmpty() const {
-    //TODO - Implementation
-    return false;
-}
+    if (headIndex == -1) {
+        return true;
+    } else {
+        return false;
+    }
+} 
 
 TElem IndexedList::getElement(int pos) const {
     if (pos < 0 || pos >= capacity) {
@@ -54,16 +60,87 @@ TElem IndexedList::getElement(int pos) const {
 }
 
 TElem IndexedList::setElement(int pos, TElem e) {
-    //TODO - Implementation
-    return NULL_TELEM;
+    if (pos < 1) {
+        throw exception("Invalid position");
+    }
+    
+    int currentPos = 1;
+    int currentIndex = headIndex;
+
+    while(nextIndexArray[currentIndex] != -1) {
+        currentPos++;
+        currentIndex = nextIndexArray[currentIndex];
+    }
+
+    if (currentIndex == -1) {
+        throw exception("Invalid position");
+    }
+
+    TElem oldValue = elemsArray[currentIndex];
+    elemsArray[currentIndex] = e;
+    return oldValue;
 }
 
 void IndexedList::addToEnd(TElem e) {
-    //TODO - Implementation
+    if (firstEmpty == -1) {
+        resizeUp();
+    }
+
+    TElem newElem = firstEmpty;
+    firstEmpty = nextIndexArray[firstEmpty];
+    elemsArray[newElem] = e;
+    nextIndexArray[newElem] = -1;
+
+    if (headIndex == -1) {
+        headIndex = newElem;
+    } else {
+        int currentIndex = headIndex;
+
+        while(nextIndexArray[currentIndex] != -1) {
+            currentIndex = nextIndexArray[currentIndex];
+        }
+
+        nextIndexArray[currentIndex] = newElem;
+    }
 }
 
 void IndexedList::addToPosition(int pos, TElem e) {
-    //TODO - Implementation
+    if (pos < 1) {
+        throw exception("Invalid position");
+    }
+
+    if (firstEmpty == -1) {
+        resizeUp();
+    }
+
+    TElem newElem = firstEmpty;
+    firstEmpty = nextIndexArray[firstEmpty];
+    elemsArray[newElem] = e;
+    nextIndexArray[newElem] = -1;
+
+    if (pos == 1) {
+        if (headIndex == -1) {
+            headIndex = newElem;
+        } else {
+            nextIndexArray[newElem] = headIndex;
+            headIndex = newElem;
+        }
+    } else {
+        int currentPos = 1;
+        int currentIndex = headIndex;
+
+        while(currentIndex != -1 && currentPos < pos - 1) {
+            currentPos++;
+            currentIndex = nextIndexArray[currentIndex];
+        }
+
+        if (currentIndex != -1) {
+            nextIndexArray[newElem] = nextIndexArray[currentIndex];
+            nextIndexArray[currentIndex] = newElem;
+        } else {
+            throw exception("Invalid position");
+        }
+    }
 }
 
 TElem IndexedList::remove(int pos) { //laurentiu
@@ -124,7 +201,28 @@ IndexedList::~IndexedList() { //laurentiu
 }
 
 void IndexedList::resizeUp() {
+    int newCap = capacity * 2;
+    TElem* newElemsArray = new int[newCap];
+    int* newNextIndexArray = new int[newCap]; 
 
+    for (int i = 0; i < capacity; i++) {
+        newElemsArray[i] = elemsArray[i];
+        newNextIndexArray[i] = nextIndexArray[i];
+    }
+
+    for (int i = capacity; i < newCap - 1; i++) {
+        newNextIndexArray[i] = i + 1;
+    }
+
+    newNextIndexArray[newCap - 1] = -1;
+
+    delete[] elemsArray;
+    delete[] nextIndexArray;
+
+    elemsArray = newElemsArray;
+    nextIndexArray = newNextIndexArray;
+    firstEmpty = capacity;
+    capacity = newCap;
 }
 
 void IndexedList::resizeDown() {

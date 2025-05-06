@@ -11,11 +11,14 @@ ListIterator::ListIterator(const IndexedList &list) : list(list) {
 }
 
 void ListIterator::first() {
-    //TODO - Implementation
+    currentIndex = list.headIndex;
 }
 
 void ListIterator::next() {
-    //TODO - Implementation
+    if (valid())  {
+        currentIndex = list.nextIndexArray[currentIndex];
+    }
+    throw std::exception("Invalid pos");
 }
 
 bool ListIterator::valid() const {
