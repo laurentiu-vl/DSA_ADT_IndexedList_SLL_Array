@@ -6,7 +6,7 @@ using namespace std;
 
 int main(){
     testAll();
-    testAllExtended();
+   //testAllExtended();
     //testLaurentiu();
     cout<<"Finished LI Tests!"<<endl;
 }

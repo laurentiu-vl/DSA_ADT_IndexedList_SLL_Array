@@ -30,8 +30,15 @@ IndexedList::IndexedList(int capacity, int elemsArray[], int nextIndexArray[],
 }
 
 int IndexedList::size() const {
-    return sizeForElemsArray;
-    //or iterate
+    //return sizeForElemsArray;
+    int count = 0;
+    int currentIndex = headIndex;
+
+    while(currentIndex != -1) {
+        count++;
+        currentIndex = nextIndexArray[currentIndex];
+    }
+    return count;
 }
 
 
@@ -61,7 +68,7 @@ TElem IndexedList::getElement(int pos) const {
 
 TElem IndexedList::setElement(int pos, TElem e) {
     if (pos < 1) {
-        throw exception("Invalid position");
+        throw std::out_of_range("Invalid position");
     }
     
     int currentPos = 1;
@@ -73,7 +80,7 @@ TElem IndexedList::setElement(int pos, TElem e) {
     }
 
     if (currentIndex == -1) {
-        throw exception("Invalid position");
+        throw std::out_of_range("Invalid position");
     }
 
     TElem oldValue = elemsArray[currentIndex];
@@ -105,9 +112,9 @@ void IndexedList::addToEnd(TElem e) {
 }
 
 void IndexedList::addToPosition(int pos, TElem e) {
-    if (pos < 1) {
-        throw exception("Invalid position");
-    }
+    // if (pos < 1) {
+    //     throw std::out_of_range("Invalid position");
+    // }
 
     if (firstEmpty == -1) {
         resizeUp();
@@ -138,7 +145,7 @@ void IndexedList::addToPosition(int pos, TElem e) {
             nextIndexArray[newElem] = nextIndexArray[currentIndex];
             nextIndexArray[currentIndex] = newElem;
         } else {
-            throw exception("Invalid position");
+            throw std::out_of_range("Invalid position");
         }
     }
 }
