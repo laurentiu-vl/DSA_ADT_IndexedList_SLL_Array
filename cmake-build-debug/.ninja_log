@@ -1,7 +1,0 @@
-# ninja log v6
-20	155	7649567447581495	CMakeFiles/DSA_ADT_IndexedList_SLL_Array.dir/ListIterator.cpp.obj	893cbbcd57f9c2e3
-17	157	7649567447546145	CMakeFiles/DSA_ADT_IndexedList_SLL_Array.dir/IndexedList.cpp.obj	3c0c7e793ef23c01
-24	167	7649567447617835	CMakeFiles/DSA_ADT_IndexedList_SLL_Array.dir/ShortTest.cpp.obj	926dc53d338401f2
-2	454	7649567447399846	CMakeFiles/DSA_ADT_IndexedList_SLL_Array.dir/main.cpp.obj	7f0a31171d4ecdc
-13	552	7649567447505641	CMakeFiles/DSA_ADT_IndexedList_SLL_Array.dir/ExtendedTest.cpp.obj	e72441bc9d57a15c
-553	674	7649567452901377	DSA_ADT_IndexedList_SLL_Array.exe	b98b746aa69d1254

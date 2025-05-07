@@ -1,10 +1,9 @@
-#include <exception>
-
 #include "IndexedList.h"
 
 #include <ranges>
 #include <stdexcept>
 #include <exception>
+#include <iostream>
 
 #include "ListIterator.h"
 
@@ -15,26 +14,19 @@ IndexedList::IndexedList() {
     elemsArray = new int[capacity];
     nextIndexArray = new int[capacity];
     headIndex = -1;
+    for (int i = 1; i < capacity - 1; i++) {
+        nextIndexArray[i] = i + 1;
+    }
+    nextIndexArray[capacity] = -1;
     sizeForElemsArray = 0;
     firstEmpty = -1;
 }
 
-IndexedList::IndexedList(int capacity, int elemsArray[], int nextIndexArray[],
-                                    int headIndex, int size, int firstE) {
-    this->capacity = capacity;
-    this->elemsArray = elemsArray;
-    this->nextIndexArray = nextIndexArray;
-    this->headIndex = headIndex;
-    this->sizeForElemsArray = size;
-    this->firstEmpty = firstE;
-}
-
 int IndexedList::size() const {
-    //return sizeForElemsArray;
     int count = 0;
     int currentIndex = headIndex;
 
-    while(currentIndex != -1) {
+    while (currentIndex != -1) {
         count++;
         currentIndex = nextIndexArray[currentIndex];
     }
@@ -48,22 +40,9 @@ bool IndexedList::isEmpty() const {
     } else {
         return false;
     }
-} 
+}
 
 TElem IndexedList::getElement(int pos) const {
-    // if (pos < 0 || pos >= capacity) {
-    //     throw std::out_of_range("IndexedList::getElement");
-    // }
-    // int count = 0;
-    // int currentIndex = headIndex;
-    // while (currentIndex != -1 && count < pos) {
-    //     if (count + 1 == pos) {
-    //         return elemsArray[currentIndex];
-    //     }
-    //     currentIndex = nextIndexArray[currentIndex];
-    //     count++;
-    // }
-    // //return elemsArray[currentIndex];
     if (pos < 0 || pos >= capacity) {
         throw std::out_of_range("IndexedList::getElement");
     }
@@ -82,14 +61,14 @@ TElem IndexedList::getElement(int pos) const {
 }
 
 TElem IndexedList::setElement(int pos, TElem e) {
-    if (pos < 1) {
+    if (pos < 0) {
         throw std::out_of_range("Invalid position");
     }
-    
-    int currentPos = 1;
+
+    int currentPos = 0;
     int currentIndex = headIndex;
 
-    while(nextIndexArray[currentIndex] != -1) {
+    while (nextIndexArray[currentIndex] != -1 && currentPos < pos) {
         currentPos++;
         currentIndex = nextIndexArray[currentIndex];
     }
@@ -108,7 +87,7 @@ void IndexedList::addToEnd(TElem e) {
         resizeUp();
     }
 
-    TElem newElem = firstEmpty;
+    int newElem = firstEmpty;
     firstEmpty = nextIndexArray[firstEmpty];
     elemsArray[newElem] = e;
     nextIndexArray[newElem] = -1;
@@ -118,7 +97,7 @@ void IndexedList::addToEnd(TElem e) {
     } else {
         int currentIndex = headIndex;
 
-        while(nextIndexArray[currentIndex] != -1) {
+        while (nextIndexArray[currentIndex] != -1) {
             currentIndex = nextIndexArray[currentIndex];
         }
 
@@ -134,8 +113,7 @@ void IndexedList::addToPosition(int pos, TElem e) {
     if (firstEmpty == -1) {
         resizeUp();
     }
-
-    TElem newElem = firstEmpty;
+    int newElem = firstEmpty;
     firstEmpty = nextIndexArray[firstEmpty];
     elemsArray[newElem] = e;
     nextIndexArray[newElem] = -1;
@@ -151,7 +129,7 @@ void IndexedList::addToPosition(int pos, TElem e) {
         int currentPos = 0;
         int currentIndex = headIndex;
 
-        while(currentIndex != -1 && currentPos < pos - 1) {
+        while (currentIndex != -1 && currentPos < pos - 1) {
             currentPos++;
             currentIndex = nextIndexArray[currentIndex];
         }
@@ -165,37 +143,42 @@ void IndexedList::addToPosition(int pos, TElem e) {
     }
 }
 
-TElem IndexedList::remove(int pos) { //laurentiu
-    if (pos < 0 || pos >= size()) {
-        throw std::out_of_range("IndexedList::remove");
+TElem IndexedList::remove(int pos) {
+    //laurentiu
+    if (pos < 0) {
+        throw exception();
     }
 
-    int count = 0;
-    TElem foundElem;
     int currentIndex = headIndex;
-    int previousIndex = 0;
+    int previousIndex = -1;
+    int currentPos = 0;
 
-    //while (currentIndex != -1 && count < pos)
-    while (count < pos) {
-        // if (currentIndex == pos) {
-        //     foundElem = elemsArray[currentIndex];
-        // }
+    while (currentIndex != -1 && currentPos < pos) {
         previousIndex = currentIndex;
         currentIndex = nextIndexArray[currentIndex];
-        count++;
+        currentPos++;
     }
-    foundElem = elemsArray[currentIndex];
-    nextIndexArray[previousIndex] = nextIndexArray[currentIndex]; //prev pointeaza
-    //la urmatorul de dupa currentIndex?
+
+    if (currentIndex == -1) {
+        throw exception();
+    }
+
+    TElem removedElem = elemsArray[currentIndex];
+
+    if (previousIndex == -1) {
+        headIndex = nextIndexArray[currentIndex];
+    } else {
+        nextIndexArray[previousIndex] = nextIndexArray[currentIndex];
+    }
 
     nextIndexArray[currentIndex] = firstEmpty;
     firstEmpty = currentIndex;
-    sizeForElemsArray--;
 
-    return foundElem;
+    return removedElem;
 }
 
-int IndexedList::search(TElem e) const { //laurentiu
+int IndexedList::search(TElem e) const {
+    //laurentiu
     int currentIndex = headIndex;
     bool found = false;
     int pos = 0;
@@ -217,15 +200,16 @@ ListIterator IndexedList::iterator() const {
     return ListIterator(*this);
 }
 
-IndexedList::~IndexedList() { //laurentiu
+IndexedList::~IndexedList() {
+    //laurentiu
     delete[] nextIndexArray;
     delete[] elemsArray;
 }
 
 void IndexedList::resizeUp() {
     int newCap = capacity * 2;
-    TElem* newElemsArray = new int[newCap];
-    int* newNextIndexArray = new int[newCap]; 
+    TElem *newElemsArray = new int[newCap];
+    int *newNextIndexArray = new int[newCap];
 
     for (int i = 0; i < capacity; i++) {
         newElemsArray[i] = elemsArray[i];
@@ -248,5 +232,14 @@ void IndexedList::resizeUp() {
 }
 
 void IndexedList::resizeDown() {
+}
 
+void IndexedList::debugPrint() const {
+    std::cout << "HEAD: " << headIndex << "\n";
+    int idx = headIndex;
+    while (idx != -1) {
+        std::cout << "[" << idx << "] " << elemsArray[idx] << " → ";
+        idx = nextIndexArray[idx];
+    }
+    std::cout << "NULL\n";
 }

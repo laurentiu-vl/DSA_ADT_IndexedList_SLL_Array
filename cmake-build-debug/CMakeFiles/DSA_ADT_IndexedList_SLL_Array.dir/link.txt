@@ -1,0 +1,3 @@
+"H:\CLion 2025.1\bin\cmake\win\x64\bin\cmake.exe" -E rm -f CMakeFiles\DSA_ADT_IndexedList_SLL_Array.dir/objects.a
+"H:\CLion 2025.1\bin\mingw\bin\ar.exe" qc CMakeFiles\DSA_ADT_IndexedList_SLL_Array.dir/objects.a @CMakeFiles\DSA_ADT_IndexedList_SLL_Array.dir\objects1.rsp
+"H:\CLion 2025.1\bin\mingw\bin\g++.exe" -g -Wl,--whole-archive CMakeFiles\DSA_ADT_IndexedList_SLL_Array.dir/objects.a -Wl,--no-whole-archive -o DSA_ADT_IndexedList_SLL_Array.exe -Wl,--out-implib,libDSA_ADT_IndexedList_SLL_Array.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\DSA_ADT_IndexedList_SLL_Array.dir\linkLibs.rsp

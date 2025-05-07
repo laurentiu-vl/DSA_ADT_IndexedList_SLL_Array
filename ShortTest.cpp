@@ -28,22 +28,3 @@ void testAll() {
     assert(list.remove(0) == 2);
     assert(list.size() == 1);
 }
-
-void testLaurentiu() {
-    //IndexedList list = IndexedList();
-    int capacity = 10;
-    int elemsArray[capacity] = {10, 8, 9, 2};
-    int next[capacity] = {-1, 3, 0, 2};
-    int head = 1;
-    int size = 100;
-    int firstE = 0;
-
-    IndexedList list2 = IndexedList(capacity, elemsArray, next, head, size, firstE);
-    //std::cout << list2.search(1) << std::endl;
-    //std::cout << list2.getElement(4) << std::endl;
-    std::cout << list2.remove(0) << std::endl;
-
-    ListIterator it2 = list2.iterator();
-    assert(it2.valid());
-    //assert(it2.getCurrent() == 9);
-}

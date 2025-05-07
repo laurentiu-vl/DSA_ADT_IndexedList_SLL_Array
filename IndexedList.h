@@ -67,4 +67,6 @@ public:
 
     void resizeDown();
 
+    void debugPrint() const;
+
 };
