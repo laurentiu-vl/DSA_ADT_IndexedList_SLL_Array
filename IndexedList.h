@@ -67,6 +67,5 @@ public:
 
     void resizeDown();
 
-    void debugPrint() const;
-
+    bool operator==(const IndexedList& listB) const;
 };
