@@ -9,7 +9,7 @@
 
 using namespace std;
 
-IndexedList::IndexedList() {
+IndexedList::IndexedList() { //best theta 1, worst theta 1, avg 1 pt ca cap 2 (2-1)
     capacity = 2;
     elemsArray = new int[capacity];
     nextIndexArray = new int[capacity];
@@ -22,7 +22,7 @@ IndexedList::IndexedList() {
     firstEmpty = -1;
 }
 
-int IndexedList::size() const {
+int IndexedList::size() const { //best theta 1 head -1, worst theta n, avg theta n
     int count = 0;
     int currentIndex = headIndex;
 
@@ -34,7 +34,7 @@ int IndexedList::size() const {
 }
 
 
-bool IndexedList::isEmpty() const {
+bool IndexedList::isEmpty() const { //best theta 1, worst theta 1, avg 1
     if (headIndex == -1) {
         return true;
     } else {
@@ -42,7 +42,7 @@ bool IndexedList::isEmpty() const {
     }
 }
 
-TElem IndexedList::getElement(int pos) const {
+TElem IndexedList::getElement(int pos) const { //best theta 1, worst theta n, avg On
     if (pos < 0 || pos >= capacity) {
         throw std::out_of_range("IndexedList::getElement");
     }
@@ -60,7 +60,7 @@ TElem IndexedList::getElement(int pos) const {
     return elemsArray[currentIndex];
 }
 
-TElem IndexedList::setElement(int pos, TElem e) {
+TElem IndexedList::setElement(int pos, TElem e) { //best theta 1, worst theta n, avg On
     if (pos < 0) {
         throw std::out_of_range("Invalid position");
     }
@@ -82,7 +82,7 @@ TElem IndexedList::setElement(int pos, TElem e) {
     return oldValue;
 }
 
-void IndexedList::addToEnd(TElem e) {
+void IndexedList::addToEnd(TElem e) { //best theta n, worst theta n, avg On
     if (firstEmpty == -1) {
         resizeUp();
     }
@@ -105,7 +105,7 @@ void IndexedList::addToEnd(TElem e) {
     }
 }
 
-void IndexedList::addToPosition(int pos, TElem e) {
+void IndexedList::addToPosition(int pos, TElem e) { //best theta 1, worst theta n, avg On
     if (pos < 0) {
         throw std::out_of_range("Invalid position");
     }
@@ -143,7 +143,7 @@ void IndexedList::addToPosition(int pos, TElem e) {
     }
 }
 
-TElem IndexedList::remove(int pos) {
+TElem IndexedList::remove(int pos) { //best theta 1, worst theta n, avg On
     //laurentiu
     if (pos < 0) {
         throw exception();
@@ -159,16 +159,17 @@ TElem IndexedList::remove(int pos) {
         currentPos++;
     }
 
-    if (currentIndex == -1) {
+    if (currentIndex == -1) { //capat de lista
         throw exception();
     }
 
     TElem removedElem = elemsArray[currentIndex];
 
-    if (previousIndex == -1) {
+    if (previousIndex == -1) { //primul elem
         headIndex = nextIndexArray[currentIndex];
     } else {
-        nextIndexArray[previousIndex] = nextIndexArray[currentIndex];
+        nextIndexArray[previousIndex] = nextIndexArray[currentIndex]; //prev pointeaza catre next,
+        //se sterge
     }
 
     nextIndexArray[currentIndex] = firstEmpty;
@@ -177,7 +178,7 @@ TElem IndexedList::remove(int pos) {
     return removedElem;
 }
 
-int IndexedList::search(TElem e) const {
+int IndexedList::search(TElem e) const { //best theta cap, worst theta n, avg On
     //laurentiu
     int currentIndex = headIndex;
     bool found = false;
@@ -200,13 +201,13 @@ ListIterator IndexedList::iterator() const {
     return ListIterator(*this);
 }
 
-IndexedList::~IndexedList() {
+IndexedList::~IndexedList() { //best theta 1, worst theta 1, avg 1
     //laurentiu
     delete[] nextIndexArray;
     delete[] elemsArray;
 }
 
-void IndexedList::resizeUp() {
+void IndexedList::resizeUp() { //best theta n, worst theta n, avg theta n
     int newCap = capacity * 2;
     TElem *newElemsArray = new int[newCap];
     int *newNextIndexArray = new int[newCap];
@@ -231,15 +232,26 @@ void IndexedList::resizeUp() {
     capacity = newCap;
 }
 
-void IndexedList::resizeDown() {
-}
+void IndexedList::resizeDown() { //best theta n, worst theta n, avg theta n
 
-void IndexedList::debugPrint() const {
-    std::cout << "HEAD: " << headIndex << "\n";
-    int idx = headIndex;
-    while (idx != -1) {
-        std::cout << "[" << idx << "] " << elemsArray[idx] << " → ";
-        idx = nextIndexArray[idx];
+    int newCap = capacity / 2;
+    TElem *newElemsArray = new int[newCap];
+    int *newNextIndexArray = new int[newCap];
+    int currentIndex = headIndex;
+    int newIndex = 0;
+
+    while (currentIndex != -1 && newIndex < newCap) {
+        newElemsArray[newIndex] = elemsArray[currentIndex];
+        newNextIndexArray[newIndex] = newIndex + 1;
+        currentIndex = nextIndexArray[currentIndex];
+        newIndex++;
     }
-    std::cout << "NULL\n";
+
+    delete[] elemsArray;
+    delete[] nextIndexArray;
+
+    elemsArray = newElemsArray;
+    nextIndexArray = newNextIndexArray;
+    firstEmpty = newIndex;
+    capacity = newCap;
 }

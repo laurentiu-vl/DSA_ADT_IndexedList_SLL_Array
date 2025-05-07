@@ -27,4 +27,12 @@ void testAll() {
     assert(list.getElement(1) == 3);
     assert(list.remove(0) == 2);
     assert(list.size() == 1);
+    // list.addToPosition(0,11);
+    // list.addToPosition(1,46);
+    // list.addToPosition(2,59);
+    // list.addToEnd(78);
+    //
+    // assert(list.remove(2) == 59);
+    // std::cout<<"trece";
+
 }
