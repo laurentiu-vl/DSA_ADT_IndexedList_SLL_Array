@@ -30,43 +30,43 @@ void testAll() {
 }
 
 void testOp() {
-    IndexedList list = IndexedList();
-    IndexedList list2 = IndexedList();
+    IndexedList list10 = IndexedList();
+    IndexedList list11 = IndexedList();
 
-    list.addToEnd(1);
-    list.addToEnd(2);
-    list2.addToEnd(1);
-    list2.addToEnd(2);
+    list10.addToEnd(1);
+    list10.addToEnd(2);
+    list11.addToEnd(1);
+    list11.addToEnd(2);
 
-    assert((list == list2) == true);
+    assert((list10 == list11) == true);
 
-    std::cout<<"t1"<<std::endl;
+    std::cout<<"t"<<std::endl;
 
 }
 
 void testOp1() {
-    IndexedList list = IndexedList();
-    IndexedList list2 = IndexedList();
+    IndexedList list20 = IndexedList();
+    IndexedList list21 = IndexedList();
 
-    list.addToEnd(1);
-    list.addToEnd(3);
-    list2.addToEnd(2);
-    list2.addToEnd(2);
+    list20.addToEnd(1);
+    list20.addToEnd(3);
+    list21.addToEnd(2);
+    list21.addToEnd(2);
 
-    assert((list == list2) == false);
-    std::cout<<"t2"<<std::endl;
+    assert((list20 == list21) == false);
+    std::cout<<"t1"<<std::endl;
 }
 
 void testOp3() {
-    IndexedList list = IndexedList();
-    IndexedList list2 = IndexedList();
+    IndexedList list30 = IndexedList();
+    IndexedList list31 = IndexedList();
 
-    list.addToEnd(1);
-    list.addToEnd(2);
-    list.addToEnd(3);
-    list2.addToEnd(1);
-    list2.addToEnd(2);
+    list30.addToEnd(1);
+    list30.addToEnd(2);
+    list30.addToEnd(3);
+    list31.addToEnd(1);
+    list31.addToEnd(2);
 
-    assert((list == list2) == false);
+    assert((list30 == list31) == false);
     std::cout<<"t3"<<std::endl;
 }
