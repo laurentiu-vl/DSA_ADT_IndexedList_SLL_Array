@@ -29,7 +29,7 @@ void testAll() {
     assert(list.size() == 1);
 }
 
-void testOp() {
+void testOp1() {
     IndexedList list10 = IndexedList();
     IndexedList list11 = IndexedList();
 
@@ -40,11 +40,11 @@ void testOp() {
 
     assert((list10 == list11) == true);
 
-    std::cout<<"t"<<std::endl;
+    std::cout<<"t1"<<std::endl;
 
 }
 
-void testOp1() {
+void testOp2() {
     IndexedList list20 = IndexedList();
     IndexedList list21 = IndexedList();
 
@@ -54,7 +54,7 @@ void testOp1() {
     list21.addToEnd(2);
 
     assert((list20 == list21) == false);
-    std::cout<<"t1"<<std::endl;
+    std::cout<<"t2"<<std::endl;
 }
 
 void testOp3() {
