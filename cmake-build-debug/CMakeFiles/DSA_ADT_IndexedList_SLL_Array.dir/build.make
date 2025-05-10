@@ -52,10 +52,10 @@ RM = "C:\Program Files\JetBrains\CLion 2024.3.4\bin\cmake\win\x64\bin\cmake.exe"
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = C:\Laurentiu\SDA_2024-2025\Labor\DSA_ADT_IndexedList_SLL_Array
+CMAKE_SOURCE_DIR = "C:\Laurentiu files\Development\SDA 2024_2025 Labs\DSA_ADT_IndexedList_SLL_Array"
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = C:\Laurentiu\SDA_2024-2025\Labor\DSA_ADT_IndexedList_SLL_Array\cmake-build-debug
+CMAKE_BINARY_DIR = "C:\Laurentiu files\Development\SDA 2024_2025 Labs\DSA_ADT_IndexedList_SLL_Array\cmake-build-debug"
 
 # Include any dependencies generated for this target.
 include CMakeFiles/DSA_ADT_IndexedList_SLL_Array.dir/depend.make
@@ -69,74 +69,74 @@ include CMakeFiles/DSA_ADT_IndexedList_SLL_Array.dir/progress.make
 include CMakeFiles/DSA_ADT_IndexedList_SLL_Array.dir/flags.make
 
 CMakeFiles/DSA_ADT_IndexedList_SLL_Array.dir/main.cpp.obj: CMakeFiles/DSA_ADT_IndexedList_SLL_Array.dir/flags.make
-CMakeFiles/DSA_ADT_IndexedList_SLL_Array.dir/main.cpp.obj: C:/Laurentiu/SDA_2024-2025/Labor/DSA_ADT_IndexedList_SLL_Array/main.cpp
+CMakeFiles/DSA_ADT_IndexedList_SLL_Array.dir/main.cpp.obj: C:/Laurentiu\ files/Development/SDA\ 2024_2025\ Labs/DSA_ADT_IndexedList_SLL_Array/main.cpp
 CMakeFiles/DSA_ADT_IndexedList_SLL_Array.dir/main.cpp.obj: CMakeFiles/DSA_ADT_IndexedList_SLL_Array.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Laurentiu\SDA_2024-2025\Labor\DSA_ADT_IndexedList_SLL_Array\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/DSA_ADT_IndexedList_SLL_Array.dir/main.cpp.obj"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/DSA_ADT_IndexedList_SLL_Array.dir/main.cpp.obj -MF CMakeFiles\DSA_ADT_IndexedList_SLL_Array.dir\main.cpp.obj.d -o CMakeFiles\DSA_ADT_IndexedList_SLL_Array.dir\main.cpp.obj -c C:\Laurentiu\SDA_2024-2025\Labor\DSA_ADT_IndexedList_SLL_Array\main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="C:\Laurentiu files\Development\SDA 2024_2025 Labs\DSA_ADT_IndexedList_SLL_Array\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/DSA_ADT_IndexedList_SLL_Array.dir/main.cpp.obj"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/DSA_ADT_IndexedList_SLL_Array.dir/main.cpp.obj -MF CMakeFiles\DSA_ADT_IndexedList_SLL_Array.dir\main.cpp.obj.d -o CMakeFiles\DSA_ADT_IndexedList_SLL_Array.dir\main.cpp.obj -c "C:\Laurentiu files\Development\SDA 2024_2025 Labs\DSA_ADT_IndexedList_SLL_Array\main.cpp"
 
 CMakeFiles/DSA_ADT_IndexedList_SLL_Array.dir/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/DSA_ADT_IndexedList_SLL_Array.dir/main.cpp.i"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Laurentiu\SDA_2024-2025\Labor\DSA_ADT_IndexedList_SLL_Array\main.cpp > CMakeFiles\DSA_ADT_IndexedList_SLL_Array.dir\main.cpp.i
+	C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Laurentiu files\Development\SDA 2024_2025 Labs\DSA_ADT_IndexedList_SLL_Array\main.cpp" > CMakeFiles\DSA_ADT_IndexedList_SLL_Array.dir\main.cpp.i
 
 CMakeFiles/DSA_ADT_IndexedList_SLL_Array.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/DSA_ADT_IndexedList_SLL_Array.dir/main.cpp.s"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Laurentiu\SDA_2024-2025\Labor\DSA_ADT_IndexedList_SLL_Array\main.cpp -o CMakeFiles\DSA_ADT_IndexedList_SLL_Array.dir\main.cpp.s
+	C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Laurentiu files\Development\SDA 2024_2025 Labs\DSA_ADT_IndexedList_SLL_Array\main.cpp" -o CMakeFiles\DSA_ADT_IndexedList_SLL_Array.dir\main.cpp.s
 
 CMakeFiles/DSA_ADT_IndexedList_SLL_Array.dir/ExtendedTest.cpp.obj: CMakeFiles/DSA_ADT_IndexedList_SLL_Array.dir/flags.make
-CMakeFiles/DSA_ADT_IndexedList_SLL_Array.dir/ExtendedTest.cpp.obj: C:/Laurentiu/SDA_2024-2025/Labor/DSA_ADT_IndexedList_SLL_Array/ExtendedTest.cpp
+CMakeFiles/DSA_ADT_IndexedList_SLL_Array.dir/ExtendedTest.cpp.obj: C:/Laurentiu\ files/Development/SDA\ 2024_2025\ Labs/DSA_ADT_IndexedList_SLL_Array/ExtendedTest.cpp
 CMakeFiles/DSA_ADT_IndexedList_SLL_Array.dir/ExtendedTest.cpp.obj: CMakeFiles/DSA_ADT_IndexedList_SLL_Array.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Laurentiu\SDA_2024-2025\Labor\DSA_ADT_IndexedList_SLL_Array\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/DSA_ADT_IndexedList_SLL_Array.dir/ExtendedTest.cpp.obj"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/DSA_ADT_IndexedList_SLL_Array.dir/ExtendedTest.cpp.obj -MF CMakeFiles\DSA_ADT_IndexedList_SLL_Array.dir\ExtendedTest.cpp.obj.d -o CMakeFiles\DSA_ADT_IndexedList_SLL_Array.dir\ExtendedTest.cpp.obj -c C:\Laurentiu\SDA_2024-2025\Labor\DSA_ADT_IndexedList_SLL_Array\ExtendedTest.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="C:\Laurentiu files\Development\SDA 2024_2025 Labs\DSA_ADT_IndexedList_SLL_Array\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/DSA_ADT_IndexedList_SLL_Array.dir/ExtendedTest.cpp.obj"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/DSA_ADT_IndexedList_SLL_Array.dir/ExtendedTest.cpp.obj -MF CMakeFiles\DSA_ADT_IndexedList_SLL_Array.dir\ExtendedTest.cpp.obj.d -o CMakeFiles\DSA_ADT_IndexedList_SLL_Array.dir\ExtendedTest.cpp.obj -c "C:\Laurentiu files\Development\SDA 2024_2025 Labs\DSA_ADT_IndexedList_SLL_Array\ExtendedTest.cpp"
 
 CMakeFiles/DSA_ADT_IndexedList_SLL_Array.dir/ExtendedTest.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/DSA_ADT_IndexedList_SLL_Array.dir/ExtendedTest.cpp.i"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Laurentiu\SDA_2024-2025\Labor\DSA_ADT_IndexedList_SLL_Array\ExtendedTest.cpp > CMakeFiles\DSA_ADT_IndexedList_SLL_Array.dir\ExtendedTest.cpp.i
+	C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Laurentiu files\Development\SDA 2024_2025 Labs\DSA_ADT_IndexedList_SLL_Array\ExtendedTest.cpp" > CMakeFiles\DSA_ADT_IndexedList_SLL_Array.dir\ExtendedTest.cpp.i
 
 CMakeFiles/DSA_ADT_IndexedList_SLL_Array.dir/ExtendedTest.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/DSA_ADT_IndexedList_SLL_Array.dir/ExtendedTest.cpp.s"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Laurentiu\SDA_2024-2025\Labor\DSA_ADT_IndexedList_SLL_Array\ExtendedTest.cpp -o CMakeFiles\DSA_ADT_IndexedList_SLL_Array.dir\ExtendedTest.cpp.s
+	C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Laurentiu files\Development\SDA 2024_2025 Labs\DSA_ADT_IndexedList_SLL_Array\ExtendedTest.cpp" -o CMakeFiles\DSA_ADT_IndexedList_SLL_Array.dir\ExtendedTest.cpp.s
 
 CMakeFiles/DSA_ADT_IndexedList_SLL_Array.dir/IndexedList.cpp.obj: CMakeFiles/DSA_ADT_IndexedList_SLL_Array.dir/flags.make
-CMakeFiles/DSA_ADT_IndexedList_SLL_Array.dir/IndexedList.cpp.obj: C:/Laurentiu/SDA_2024-2025/Labor/DSA_ADT_IndexedList_SLL_Array/IndexedList.cpp
+CMakeFiles/DSA_ADT_IndexedList_SLL_Array.dir/IndexedList.cpp.obj: C:/Laurentiu\ files/Development/SDA\ 2024_2025\ Labs/DSA_ADT_IndexedList_SLL_Array/IndexedList.cpp
 CMakeFiles/DSA_ADT_IndexedList_SLL_Array.dir/IndexedList.cpp.obj: CMakeFiles/DSA_ADT_IndexedList_SLL_Array.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Laurentiu\SDA_2024-2025\Labor\DSA_ADT_IndexedList_SLL_Array\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/DSA_ADT_IndexedList_SLL_Array.dir/IndexedList.cpp.obj"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/DSA_ADT_IndexedList_SLL_Array.dir/IndexedList.cpp.obj -MF CMakeFiles\DSA_ADT_IndexedList_SLL_Array.dir\IndexedList.cpp.obj.d -o CMakeFiles\DSA_ADT_IndexedList_SLL_Array.dir\IndexedList.cpp.obj -c C:\Laurentiu\SDA_2024-2025\Labor\DSA_ADT_IndexedList_SLL_Array\IndexedList.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="C:\Laurentiu files\Development\SDA 2024_2025 Labs\DSA_ADT_IndexedList_SLL_Array\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/DSA_ADT_IndexedList_SLL_Array.dir/IndexedList.cpp.obj"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/DSA_ADT_IndexedList_SLL_Array.dir/IndexedList.cpp.obj -MF CMakeFiles\DSA_ADT_IndexedList_SLL_Array.dir\IndexedList.cpp.obj.d -o CMakeFiles\DSA_ADT_IndexedList_SLL_Array.dir\IndexedList.cpp.obj -c "C:\Laurentiu files\Development\SDA 2024_2025 Labs\DSA_ADT_IndexedList_SLL_Array\IndexedList.cpp"
 
 CMakeFiles/DSA_ADT_IndexedList_SLL_Array.dir/IndexedList.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/DSA_ADT_IndexedList_SLL_Array.dir/IndexedList.cpp.i"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Laurentiu\SDA_2024-2025\Labor\DSA_ADT_IndexedList_SLL_Array\IndexedList.cpp > CMakeFiles\DSA_ADT_IndexedList_SLL_Array.dir\IndexedList.cpp.i
+	C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Laurentiu files\Development\SDA 2024_2025 Labs\DSA_ADT_IndexedList_SLL_Array\IndexedList.cpp" > CMakeFiles\DSA_ADT_IndexedList_SLL_Array.dir\IndexedList.cpp.i
 
 CMakeFiles/DSA_ADT_IndexedList_SLL_Array.dir/IndexedList.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/DSA_ADT_IndexedList_SLL_Array.dir/IndexedList.cpp.s"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Laurentiu\SDA_2024-2025\Labor\DSA_ADT_IndexedList_SLL_Array\IndexedList.cpp -o CMakeFiles\DSA_ADT_IndexedList_SLL_Array.dir\IndexedList.cpp.s
+	C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Laurentiu files\Development\SDA 2024_2025 Labs\DSA_ADT_IndexedList_SLL_Array\IndexedList.cpp" -o CMakeFiles\DSA_ADT_IndexedList_SLL_Array.dir\IndexedList.cpp.s
 
 CMakeFiles/DSA_ADT_IndexedList_SLL_Array.dir/ListIterator.cpp.obj: CMakeFiles/DSA_ADT_IndexedList_SLL_Array.dir/flags.make
-CMakeFiles/DSA_ADT_IndexedList_SLL_Array.dir/ListIterator.cpp.obj: C:/Laurentiu/SDA_2024-2025/Labor/DSA_ADT_IndexedList_SLL_Array/ListIterator.cpp
+CMakeFiles/DSA_ADT_IndexedList_SLL_Array.dir/ListIterator.cpp.obj: C:/Laurentiu\ files/Development/SDA\ 2024_2025\ Labs/DSA_ADT_IndexedList_SLL_Array/ListIterator.cpp
 CMakeFiles/DSA_ADT_IndexedList_SLL_Array.dir/ListIterator.cpp.obj: CMakeFiles/DSA_ADT_IndexedList_SLL_Array.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Laurentiu\SDA_2024-2025\Labor\DSA_ADT_IndexedList_SLL_Array\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/DSA_ADT_IndexedList_SLL_Array.dir/ListIterator.cpp.obj"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/DSA_ADT_IndexedList_SLL_Array.dir/ListIterator.cpp.obj -MF CMakeFiles\DSA_ADT_IndexedList_SLL_Array.dir\ListIterator.cpp.obj.d -o CMakeFiles\DSA_ADT_IndexedList_SLL_Array.dir\ListIterator.cpp.obj -c C:\Laurentiu\SDA_2024-2025\Labor\DSA_ADT_IndexedList_SLL_Array\ListIterator.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="C:\Laurentiu files\Development\SDA 2024_2025 Labs\DSA_ADT_IndexedList_SLL_Array\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/DSA_ADT_IndexedList_SLL_Array.dir/ListIterator.cpp.obj"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/DSA_ADT_IndexedList_SLL_Array.dir/ListIterator.cpp.obj -MF CMakeFiles\DSA_ADT_IndexedList_SLL_Array.dir\ListIterator.cpp.obj.d -o CMakeFiles\DSA_ADT_IndexedList_SLL_Array.dir\ListIterator.cpp.obj -c "C:\Laurentiu files\Development\SDA 2024_2025 Labs\DSA_ADT_IndexedList_SLL_Array\ListIterator.cpp"
 
 CMakeFiles/DSA_ADT_IndexedList_SLL_Array.dir/ListIterator.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/DSA_ADT_IndexedList_SLL_Array.dir/ListIterator.cpp.i"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Laurentiu\SDA_2024-2025\Labor\DSA_ADT_IndexedList_SLL_Array\ListIterator.cpp > CMakeFiles\DSA_ADT_IndexedList_SLL_Array.dir\ListIterator.cpp.i
+	C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Laurentiu files\Development\SDA 2024_2025 Labs\DSA_ADT_IndexedList_SLL_Array\ListIterator.cpp" > CMakeFiles\DSA_ADT_IndexedList_SLL_Array.dir\ListIterator.cpp.i
 
 CMakeFiles/DSA_ADT_IndexedList_SLL_Array.dir/ListIterator.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/DSA_ADT_IndexedList_SLL_Array.dir/ListIterator.cpp.s"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Laurentiu\SDA_2024-2025\Labor\DSA_ADT_IndexedList_SLL_Array\ListIterator.cpp -o CMakeFiles\DSA_ADT_IndexedList_SLL_Array.dir\ListIterator.cpp.s
+	C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Laurentiu files\Development\SDA 2024_2025 Labs\DSA_ADT_IndexedList_SLL_Array\ListIterator.cpp" -o CMakeFiles\DSA_ADT_IndexedList_SLL_Array.dir\ListIterator.cpp.s
 
 CMakeFiles/DSA_ADT_IndexedList_SLL_Array.dir/ShortTest.cpp.obj: CMakeFiles/DSA_ADT_IndexedList_SLL_Array.dir/flags.make
-CMakeFiles/DSA_ADT_IndexedList_SLL_Array.dir/ShortTest.cpp.obj: C:/Laurentiu/SDA_2024-2025/Labor/DSA_ADT_IndexedList_SLL_Array/ShortTest.cpp
+CMakeFiles/DSA_ADT_IndexedList_SLL_Array.dir/ShortTest.cpp.obj: C:/Laurentiu\ files/Development/SDA\ 2024_2025\ Labs/DSA_ADT_IndexedList_SLL_Array/ShortTest.cpp
 CMakeFiles/DSA_ADT_IndexedList_SLL_Array.dir/ShortTest.cpp.obj: CMakeFiles/DSA_ADT_IndexedList_SLL_Array.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Laurentiu\SDA_2024-2025\Labor\DSA_ADT_IndexedList_SLL_Array\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/DSA_ADT_IndexedList_SLL_Array.dir/ShortTest.cpp.obj"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/DSA_ADT_IndexedList_SLL_Array.dir/ShortTest.cpp.obj -MF CMakeFiles\DSA_ADT_IndexedList_SLL_Array.dir\ShortTest.cpp.obj.d -o CMakeFiles\DSA_ADT_IndexedList_SLL_Array.dir\ShortTest.cpp.obj -c C:\Laurentiu\SDA_2024-2025\Labor\DSA_ADT_IndexedList_SLL_Array\ShortTest.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="C:\Laurentiu files\Development\SDA 2024_2025 Labs\DSA_ADT_IndexedList_SLL_Array\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/DSA_ADT_IndexedList_SLL_Array.dir/ShortTest.cpp.obj"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/DSA_ADT_IndexedList_SLL_Array.dir/ShortTest.cpp.obj -MF CMakeFiles\DSA_ADT_IndexedList_SLL_Array.dir\ShortTest.cpp.obj.d -o CMakeFiles\DSA_ADT_IndexedList_SLL_Array.dir\ShortTest.cpp.obj -c "C:\Laurentiu files\Development\SDA 2024_2025 Labs\DSA_ADT_IndexedList_SLL_Array\ShortTest.cpp"
 
 CMakeFiles/DSA_ADT_IndexedList_SLL_Array.dir/ShortTest.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/DSA_ADT_IndexedList_SLL_Array.dir/ShortTest.cpp.i"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Laurentiu\SDA_2024-2025\Labor\DSA_ADT_IndexedList_SLL_Array\ShortTest.cpp > CMakeFiles\DSA_ADT_IndexedList_SLL_Array.dir\ShortTest.cpp.i
+	C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Laurentiu files\Development\SDA 2024_2025 Labs\DSA_ADT_IndexedList_SLL_Array\ShortTest.cpp" > CMakeFiles\DSA_ADT_IndexedList_SLL_Array.dir\ShortTest.cpp.i
 
 CMakeFiles/DSA_ADT_IndexedList_SLL_Array.dir/ShortTest.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/DSA_ADT_IndexedList_SLL_Array.dir/ShortTest.cpp.s"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Laurentiu\SDA_2024-2025\Labor\DSA_ADT_IndexedList_SLL_Array\ShortTest.cpp -o CMakeFiles\DSA_ADT_IndexedList_SLL_Array.dir\ShortTest.cpp.s
+	C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Laurentiu files\Development\SDA 2024_2025 Labs\DSA_ADT_IndexedList_SLL_Array\ShortTest.cpp" -o CMakeFiles\DSA_ADT_IndexedList_SLL_Array.dir\ShortTest.cpp.s
 
 # Object files for target DSA_ADT_IndexedList_SLL_Array
 DSA_ADT_IndexedList_SLL_Array_OBJECTS = \
@@ -158,7 +158,7 @@ DSA_ADT_IndexedList_SLL_Array.exe: CMakeFiles/DSA_ADT_IndexedList_SLL_Array.dir/
 DSA_ADT_IndexedList_SLL_Array.exe: CMakeFiles/DSA_ADT_IndexedList_SLL_Array.dir/linkLibs.rsp
 DSA_ADT_IndexedList_SLL_Array.exe: CMakeFiles/DSA_ADT_IndexedList_SLL_Array.dir/objects1.rsp
 DSA_ADT_IndexedList_SLL_Array.exe: CMakeFiles/DSA_ADT_IndexedList_SLL_Array.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=C:\Laurentiu\SDA_2024-2025\Labor\DSA_ADT_IndexedList_SLL_Array\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX executable DSA_ADT_IndexedList_SLL_Array.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir="C:\Laurentiu files\Development\SDA 2024_2025 Labs\DSA_ADT_IndexedList_SLL_Array\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX executable DSA_ADT_IndexedList_SLL_Array.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\DSA_ADT_IndexedList_SLL_Array.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -170,6 +170,6 @@ CMakeFiles/DSA_ADT_IndexedList_SLL_Array.dir/clean:
 .PHONY : CMakeFiles/DSA_ADT_IndexedList_SLL_Array.dir/clean
 
 CMakeFiles/DSA_ADT_IndexedList_SLL_Array.dir/depend:
-	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" C:\Laurentiu\SDA_2024-2025\Labor\DSA_ADT_IndexedList_SLL_Array C:\Laurentiu\SDA_2024-2025\Labor\DSA_ADT_IndexedList_SLL_Array C:\Laurentiu\SDA_2024-2025\Labor\DSA_ADT_IndexedList_SLL_Array\cmake-build-debug C:\Laurentiu\SDA_2024-2025\Labor\DSA_ADT_IndexedList_SLL_Array\cmake-build-debug C:\Laurentiu\SDA_2024-2025\Labor\DSA_ADT_IndexedList_SLL_Array\cmake-build-debug\CMakeFiles\DSA_ADT_IndexedList_SLL_Array.dir\DependInfo.cmake "--color=$(COLOR)"
+	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" "C:\Laurentiu files\Development\SDA 2024_2025 Labs\DSA_ADT_IndexedList_SLL_Array" "C:\Laurentiu files\Development\SDA 2024_2025 Labs\DSA_ADT_IndexedList_SLL_Array" "C:\Laurentiu files\Development\SDA 2024_2025 Labs\DSA_ADT_IndexedList_SLL_Array\cmake-build-debug" "C:\Laurentiu files\Development\SDA 2024_2025 Labs\DSA_ADT_IndexedList_SLL_Array\cmake-build-debug" "C:\Laurentiu files\Development\SDA 2024_2025 Labs\DSA_ADT_IndexedList_SLL_Array\cmake-build-debug\CMakeFiles\DSA_ADT_IndexedList_SLL_Array.dir\DependInfo.cmake" "--color=$(COLOR)"
 .PHONY : CMakeFiles/DSA_ADT_IndexedList_SLL_Array.dir/depend
 
