@@ -6,8 +6,8 @@ using namespace std;
 
 int main(){
     testAll();
-    testOp();
     testOp1();
+    //testOp2();
     testOp3();
     testAllExtended();
 

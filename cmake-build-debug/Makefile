@@ -56,10 +56,10 @@ RM = "C:\Program Files\JetBrains\CLion 2024.3.4\bin\cmake\win\x64\bin\cmake.exe"
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = "C:\Laurentiu files\Development\SDA 2024_2025 Labs\DSA_ADT_IndexedList_SLL_Array"
+CMAKE_SOURCE_DIR = "C:\Laurentiu files\Development\DSA\DSA_ADT_IndexedList_SLL_Array"
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = "C:\Laurentiu files\Development\SDA 2024_2025 Labs\DSA_ADT_IndexedList_SLL_Array\cmake-build-debug"
+CMAKE_BINARY_DIR = "C:\Laurentiu files\Development\DSA\DSA_ADT_IndexedList_SLL_Array\cmake-build-debug"
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -86,9 +86,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Laurentiu files\Development\SDA 2024_2025 Labs\DSA_ADT_IndexedList_SLL_Array\cmake-build-debug\CMakeFiles" "C:\Laurentiu files\Development\SDA 2024_2025 Labs\DSA_ADT_IndexedList_SLL_Array\cmake-build-debug\\CMakeFiles\progress.marks"
+	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Laurentiu files\Development\DSA\DSA_ADT_IndexedList_SLL_Array\cmake-build-debug\CMakeFiles" "C:\Laurentiu files\Development\DSA\DSA_ADT_IndexedList_SLL_Array\cmake-build-debug\\CMakeFiles\progress.marks"
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Laurentiu files\Development\SDA 2024_2025 Labs\DSA_ADT_IndexedList_SLL_Array\cmake-build-debug\CMakeFiles" 0
+	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Laurentiu files\Development\DSA\DSA_ADT_IndexedList_SLL_Array\cmake-build-debug\CMakeFiles" 0
 .PHONY : all
 
 # The main clean target

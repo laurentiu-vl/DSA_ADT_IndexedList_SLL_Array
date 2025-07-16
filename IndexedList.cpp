@@ -10,7 +10,7 @@
 using namespace std;
 
 IndexedList::IndexedList() {
-    //best theta 1, worst theta 1, avg 1 pt ca cap 2 (2-1)
+    //best theta(1), worst theta(1), avg 1 pt ca cap 2 (2-1)
     capacity = 2;
     elemsArray = new int[capacity];
     nextIndexArray = new int[capacity];
@@ -21,9 +21,6 @@ IndexedList::IndexedList() {
     nextIndexArray[capacity] = -1;
     sizeForElemsArray = 0;
     firstEmpty = -1;
-
-    //operator overload pentru == de comparat doua containere
-    //fara sa folosim functii din interfata, doar representare
 }
 
 bool IndexedList::operator==(const IndexedList &listB) const {
@@ -43,7 +40,7 @@ bool IndexedList::operator==(const IndexedList &listB) const {
 }
 
 int IndexedList::size() const {
-    //best theta 1 head -1, worst theta n, avg theta n
+    //best theta(1) head -1, worst theta(n), avg theta(1)
     int count = 0;
     int currentIndex = headIndex;
 
@@ -55,7 +52,7 @@ int IndexedList::size() const {
 }
 
 bool IndexedList::isEmpty() const {
-    //best theta 1, worst theta 1, avg  theta 1
+    //best theta(1), worst theta(1), avg  theta(1)
     if (headIndex == -1) {
         return true;
     } else {
@@ -64,7 +61,7 @@ bool IndexedList::isEmpty() const {
 }
 
 TElem IndexedList::getElement(int pos) const {
-    //best theta 1, worst  On, avg On
+    //best theta(1), worst O(n), avg O(n)
     if (pos < 0 || pos >= capacity) {
         throw std::out_of_range("IndexedList::getElement");
     }
@@ -83,7 +80,7 @@ TElem IndexedList::getElement(int pos) const {
 }
 
 TElem IndexedList::setElement(int pos, TElem e) {
-    //best theta 1, worst  On, avg On
+    //best theta(1), worst O(n), avg O(n)
     if (pos < 0) {
         throw std::out_of_range("Invalid position");
     }
@@ -106,7 +103,7 @@ TElem IndexedList::setElement(int pos, TElem e) {
 }
 
 void IndexedList::addToEnd(TElem e) {
-    //best theta n, worst On, avg On
+    //best theta(n), worst O(n), avg O(n)
     if (firstEmpty == -1) {
         resizeUp();
     }
@@ -130,7 +127,7 @@ void IndexedList::addToEnd(TElem e) {
 }
 
 void IndexedList::addToPosition(int pos, TElem e) {
-    //best theta 1, worst On, avg On
+    //best theta(1), worst O(n), avg O(n)
     if (pos < 0) {
         throw std::out_of_range("Invalid position");
     }
@@ -169,7 +166,7 @@ void IndexedList::addToPosition(int pos, TElem e) {
 }
 
 TElem IndexedList::remove(int pos) {
-    //best theta 1, worst theta n, avg On
+    //best theta(1), worst theta(1), avg O(n)
     //laurentiu
     if (pos < 0) {
         throw exception();
@@ -207,7 +204,7 @@ TElem IndexedList::remove(int pos) {
 }
 
 int IndexedList::search(TElem e) const {
-    //best theta cap, worst theta n, avg On
+    //best theta(cap), worst theta(n), avg O(n)
     //laurentiu
     int currentIndex = headIndex;
     bool found = false;
@@ -231,14 +228,14 @@ ListIterator IndexedList::iterator() const {
 }
 
 IndexedList::~IndexedList() {
-    //best theta 1, worst theta 1, avg 1
+    //best theta(1), worst theta(1), avg(1)
     //laurentiu
     delete[] nextIndexArray;
     delete[] elemsArray;
 }
 
 void IndexedList::resizeUp() {
-    //best theta n, worst theta n, avg theta n
+    //best theta(1), worst theta(1), avg theta(1)
     int newCap = capacity * 2;
     TElem *newElemsArray = new int[newCap];
     int *newNextIndexArray = new int[newCap];
@@ -264,8 +261,7 @@ void IndexedList::resizeUp() {
 }
 
 void IndexedList::resizeDown() {
-    //best theta n, worst theta n, avg theta n
-
+    //best theta(n), worst theta(n), avg theta(n)
     int newCap = capacity / 2;
     TElem *newElemsArray = new int[newCap];
     int *newNextIndexArray = new int[newCap];

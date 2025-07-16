@@ -8,9 +8,14 @@ class ListIterator;
 
 class IndexedList {
 
-    //11. ADT IndexedList – repräsentiert mithilfe einer SLLA
-
 private:
+    //TODO - Representation
+    /* 11. ADT IndexedList – repräsentiert mithilfe einer SLLA
+    */
+
+    //functie suplimentara
+    ////operator overload pentru == de comparat doua containere
+    ////fara sa folosim functii din interfata, doar representare
 
     TElem* elemsArray;
     int* nextIndexArray;

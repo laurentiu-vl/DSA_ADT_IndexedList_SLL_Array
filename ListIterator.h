@@ -5,9 +5,10 @@ class ListIterator{
     //DO NOT CHANGE THIS PART
     friend class IndexedList;
 
-    //11. ADT IndexedList – repräsentiert mithilfe einer SLLA
-
 private:
+    //TODO - Representation
+    /* 11. ADT IndexedList – repräsentiert mithilfe einer SLLA
+    */
     const IndexedList& list;
 
     int currentIndex;
@@ -18,5 +19,4 @@ public:
     void next();
     bool valid() const;
     TElem getCurrent() const;
-
 };

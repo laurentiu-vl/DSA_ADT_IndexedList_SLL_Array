@@ -3,17 +3,17 @@
 #include <stdexcept>
 
 ListIterator::ListIterator(const IndexedList &list) : list(list) {
-    //best theta 1, worst theta 1, avg theta 1
+    //best theta(1), worst theta(1), avg theta(1)
     currentIndex = list.headIndex;
 }
 
 void ListIterator::first() {
-    //best theta 1, worst theta 1, avg theta 1
+    //best theta(1), worst theta(1), avg theta(1)
     currentIndex = list.headIndex;
 }
 
 void ListIterator::next() {
-    //best theta 1, worst theta 1, avg theta 1
+    //best theta(1), worst theta(1), avg theta(1)
     if (valid()) {
         currentIndex = list.nextIndexArray[currentIndex];
     } else {
@@ -22,7 +22,7 @@ void ListIterator::next() {
 }
 
 bool ListIterator::valid() const {
-    //best theta 1, worst theta 1, avg theta 1
+    //best theta(1), worst theta(1), avg theta(1)
     if (currentIndex != -1) {
         return true;
     }
@@ -30,7 +30,7 @@ bool ListIterator::valid() const {
 }
 
 TElem ListIterator::getCurrent() const {
-    //best theta 1, worst theta 1, avg theta 1
+    //best theta(1), worst theta(1), avg theta(1)
     if (valid()) {
         return list.elemsArray[currentIndex];
     } else {
